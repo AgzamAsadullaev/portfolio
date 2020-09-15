@@ -1,0 +1,130 @@
+.section-portfolio {
+    padding-top: 110px;
+    padding-bottom: 120px;
+    background-color: #f4f8f9;
+}
+
+.portfolio-title {
+    z-index: 2;
+    margin-bottom: 40px;
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.portfolio-title.underline::after {
+    bottom: 18px;
+}
+
+.portfolio-nav {
+    margin-bottom: 50px;
+}
+
+.portfolio-nav__item {
+    font-size: 28px;
+    font-weight: 900;
+    color: #8fa5ae;
+
+    &+.portfolio-nav__item {
+        margin-left: 80px;
+    }
+
+    &:hover,
+    &:active {
+        color: #ed665f;
+    }
+}
+
+.portfolio-nav__active {
+    color: #000;
+}
+
+.portfolio-cards__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.portfolio-card {
+    max-width: 555px;
+}
+
+.portfolio-card__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-width: 555px;
+    margin-bottom: 25px;
+}
+
+.portfolio-card__img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(242, 218, 98, 0.6);
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.hover-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: 0.5s;
+
+    font-size: 22px;
+    font-weight: 800;
+    color: #ea736d;
+
+    &:hover {
+        background-color: #ea736d;
+        color: #fff;
+    }
+
+    &:active {
+        background-color: #d4423b;
+        color: #fff;
+    }
+}
+
+.portfolio-card__img:hover::before {
+    transform: translateY(0%);
+    transition: 0.3s;
+}
+
+.portfolio-card__img:hover .hover-btn {
+    display: block;
+    transition: 0.5s;
+}
+
+.portfolio-card__link {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+
+
+    &:hover,
+    &:active {
+        color: #ed665f;
+        border-bottom: 2px solid #ed665f;
+    }
+}
+
+.portfolio-card__desc {
+    font-size: 22px;
+    font-weight: 300;
+}
