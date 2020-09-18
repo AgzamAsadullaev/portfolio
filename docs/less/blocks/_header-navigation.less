@@ -2,8 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 
-    margin-bottom: 170px;
+    margin-bottom: 40px;
+
+    @media (min-width:768px) {
+        margin-bottom: 70px;
+    }
+
+    @media (min-width:1200px) {
+        margin-bottom: 170px;
+    }
+}
+
+.header__navigation .underline,
+.header__navigation .animate-border {
+    z-index: 1;
 }
 
 .header__logo {
