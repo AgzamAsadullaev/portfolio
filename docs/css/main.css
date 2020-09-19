@@ -204,7 +204,26 @@ button {
   color: #181818;
   border-color: #181818;
 }
-.github-skill {
+.social__icons {
+  max-width: 320px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.github-social {
   color: #000;
 }
 .icon-size {
@@ -222,11 +241,13 @@ button {
 .header {
   padding-top: 30px;
   padding-bottom: 90px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .header {
     padding-top: 30px;
     padding-bottom: 80px;
+    overflow: visible;
   }
 }
 @media (min-width: 1200px) {
@@ -573,24 +594,6 @@ button {
 .header-skills__contacts .skills-title {
   margin-bottom: 30px;
 }
-.header-skills__icons {
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
 .mailto-link {
   color: #000;
   border-bottom: 1px solid #000;
@@ -783,6 +786,70 @@ button {
       -ms-transform: rotate(-45deg);
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+.navigation-menu {
+  width: 320px;
+  height: 100vh;
+  padding-left: 15px;
+  background-color: #fff;
+  position: fixed;
+  top: 95px;
+  left: 0;
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 6;
+}
+.navigation-menu.active {
+  -webkit-transform: translateX(0%);
+     -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+       -o-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+.nav-menu__link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #000;
+}
+.nav-menu__link:last-child {
+  margin-bottom: 0;
+}
+.nav-menu__link:hover {
+  opacity: 0.6;
+}
+.navigation-menu .social__icons {
+  max-width: 300px;
 }
 .section-portfolio {
   padding-top: 50px;
@@ -1312,13 +1379,25 @@ button {
 }
 */
 .section-contacts {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 50px;
+  padding-bottom: 60px;
   background-color: #f4f8f9;
   -moz-background-size: contain;
        background-size: contain;
   background-position: 0 0;
   background-repeat: repeat;
+}
+@media (min-width: 768px) {
+  .section-contacts {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-contacts {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 .contacts-title {
   display: -webkit-box;
@@ -1331,15 +1410,40 @@ button {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .contacts-title {
+    margin-bottom: 60px;
+  }
 }
 .contacts-title__text {
-  font-size: 64px;
+  font-size: 42px;
   font-weight: 900;
   z-index: 2;
 }
+@media (min-width: 768px) {
+  .contacts-title__text {
+    font-size: 52px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-title__text {
+    font-size: 64px;
+  }
+}
 .contacts-title__text.underline::after {
-  bottom: 18px;
+  bottom: 13px;
+}
+@media (min-width: 768px) {
+  .contacts-title__text.underline::after {
+    bottom: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-title__text.underline::after {
+    bottom: 18px;
+  }
 }
 .contacts__wrapper {
   position: relative;
@@ -1348,31 +1452,89 @@ button {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 4;
+}
+@media (min-width: 768px) {
+  .contacts__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .contacts__wrapper-img {
   position: absolute;
   top: -20px;
   left: -350px;
   z-index: -1;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .contacts__wrapper-img {
+    display: block;
+  }
 }
 .contacts-text {
-  max-width: 505px;
-  padding-top: 30px;
+  max-width: 290px;
+}
+@media (min-width: 768px) {
+  .contacts-text {
+    max-width: 340px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-text {
+    max-width: 505px;
+    padding-top: 30px;
+  }
 }
 .contacts-text__desc {
-  margin-bottom: 35px;
-  font-size: 20px;
+  margin-bottom: 30px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 26px;
+}
+@media (min-width: 768px) {
+  .contacts-text__desc {
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-text__desc {
+    margin-bottom: 35px;
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 .contacts-text__list {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .contacts-text__list {
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-text__list {
+    margin-bottom: 40px;
+  }
 }
 .contacts-list__item {
   display: -webkit-box;
@@ -1380,6 +1542,13 @@ button {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
 }
 .contacts-list__item p:first-child {
@@ -1389,38 +1558,79 @@ button {
 .contacts-list__item:last-child {
   margin-bottom: 0;
 }
+@media (min-width: 1200px) {
+  .contacts-list__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .contacts-adress {
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
+@media (min-width: 1200px) {
+  .contacts-adress {
+    font-size: 20px;
+  }
+}
 .mail-link {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: #039be5;
 }
+@media (min-width: 1200px) {
+  .mail-link {
+    font-size: 20px;
+  }
+}
 .contacs-link {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: #96969d;
 }
-.contacts-icons {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 1200px) {
+  .contacs-link {
+    font-size: 20px;
+  }
 }
 .contacts-form {
-  max-width: 510px;
-  padding: 50px 60px;
+  max-width: 290px;
+  padding: 40px 15px;
   background-color: #fff;
   -webkit-box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 0.004);
      -moz-box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 0.004);
           box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 0.004);
 }
+@media (min-width: 768px) {
+  .contacts-form {
+    max-width: 340px;
+    padding: 40px 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-form {
+    max-width: 510px;
+    padding: 50px 60px;
+  }
+}
 .contacts-form__wrapper {
-  width: 390px;
+  width: 260px;
+}
+@media (min-width: 768px) {
+  .contacts-form__wrapper {
+    width: 290px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-form__wrapper {
+    width: 390px;
+  }
 }
 .form-item {
   margin-bottom: 40px;
@@ -1462,10 +1672,49 @@ button {
   font-size: 16px;
   font-weight: 700;
 }
+.form-btn {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .form-btn {
+    text-align: left;
+  }
+}
+.form-btn button {
+  padding-left: 70px;
+  padding-right: 70px;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .form-btn button {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-btn button {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 22px;
+    font-weight: 800;
+  }
+}
 .footer {
-  padding-top: 25px;
+  padding-top: 35px;
   padding-bottom: 40px;
   background-color: #333333;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding-bottom: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
 }
 .footer-header {
   margin-bottom: 15px;
