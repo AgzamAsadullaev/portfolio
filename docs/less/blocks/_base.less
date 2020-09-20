@@ -23,7 +23,9 @@ body {
     font-family: var(--font);
     font-weight: 400;
 }
-
+.body.active{
+    overflow: hidden;
+}
 #page-nav {
     display: none;
 
@@ -219,6 +221,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.social__icons a:hover{
+    transition: 0.5s;
+    opacity: 0.6;
 }
 .github-social {
     //font-size: 40px;

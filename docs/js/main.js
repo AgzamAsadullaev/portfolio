@@ -1,9 +1,14 @@
 $(document).ready(function () {
 
     const menuToggle = document.querySelector('.toggle-menu');
+    const navMenu = document.querySelector('.navigation-menu');
+    const overlay = document.querySelector('.overlay');
+    const body = document.querySelector('.body');
     menuToggle.addEventListener('click', function () {
         this.classList.toggle('active');
-
+        navMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.classList.toggle('active');
     });
 
 
@@ -27,7 +32,7 @@ $(document).ready(function () {
 
     // Подключение точек пагинации справа page-nav
 
-    
+
     $('#page-nav').onePageNav({
         currentClass: 'active',
         changeHash: false,

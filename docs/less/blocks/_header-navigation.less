@@ -92,7 +92,6 @@
 }
 
 .vk-icon {
-    padding-top: 8px;
     color: #000;
 
     &:hover,
@@ -107,6 +106,7 @@
     height: 25px;
     display: flex;
     cursor: pointer;
+    z-index: 7;
 
     @media(min-width: 1200px) {
         display: none;
@@ -142,6 +142,9 @@
 }
 
 .toggle-menu.active {
+    position: fixed;
+    top: 50px;
+    right: 30px;
     span {
         background-color: transparent;
 

@@ -11,7 +11,48 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="body">
+
+    <!--Overlay-->
+    <div class="overlay"></div>
+    <!--//Overlay-->
+
+    <!--Navigation menu-->
+    <div class="navigation-menu">
+        <div class="header__logo">
+            <a href="#" class="header__logo-text underline">AA</a>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-menu__link">Главная</a>
+            <a href="#portfolio" class="nav-menu__link">Работы</a>
+            <a href="#contacts" class="nav-menu__link">Контакты</a>
+        </nav>
+        <div class="social__icons">
+            <a href="https://github.com/AgzamAsadullaev" class="skills-icons__link">
+                <i class="fab fa-github fa-3x github-social"></i>
+            </a>
+            <a href="https://t.me/bionick_hand" class="skills-icons__link">
+                <span class="fa-stack fa-lg icon-size">
+                    <i class="fa fa-circle fa-stack-2x tgram-circle"></i>
+                    <i class="fab fa-telegram-plane fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <a href="https://vk.com/agzam94" class="skills-icons__link">
+                <span class="fa-stack fa-lg icon-size">
+                    <i class="fa fa-circle fa-stack-2x vk-circle"></i>
+                    <i class="fab fa-vk fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <a href="https://www.facebook.com/agzam.asadullaev" class="skills-icons__link">
+                <span class="fa-stack fa-lg icon-size">
+                    <i class="fa fa-circle fa-stack-2x facebook-circle"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </div>
+        <a href="mailto:agzamasadullaev@gmail.com" class="mailto-link">agzamasadullaev@gmail.com</a>
+    </div>
+    <!--//Navigation menu-->
 
     <ul id="page-nav">
         <li class="active">
@@ -39,9 +80,9 @@
 
                 <!--Header nav-menu-->
                 <nav class="header__nav">
-                    <a href="#" class="header__nav-link animate-border">Главная</a>
-                    <a href="#" class="header__nav-link animate-border">Работы</a>
-                    <a href="#" class="header__nav-link animate-border">Контакты</a>
+                    <a href="index.html" class="header__nav-link animate-border">Главная</a>
+                    <a href="#portfolio" class="header__nav-link animate-border">Работы</a>
+                    <a href="#contacts" class="header__nav-link animate-border">Контакты</a>
                 </nav>
                 <!--//Header nav-menu-->
 
@@ -75,7 +116,7 @@
             <div class="container">
                 <div class="header-title__content">
                     <div class="header-title__img" data-aos="fade-left" data-aos-duration="2000">
-                        <img src="images/header/header-img.jpg" alt="frontend">
+                        <img src="images/header/webdeveloper.jpg" alt="frontend">
                     </div>
                     <div class="header-title__text" data-aos="fade-right" data-aos-duration="2000">
                         <div class="header-title__name">
@@ -91,8 +132,8 @@
                             </p>
                         </div>
                         <div class="header-title__buttons">
-                            <a href="#" class="main-btn">Познакомиться</a>
-                            <a href="#" class="page-btn">Контакты</a>
+                            <a href="#skills" class="main-btn">Познакомиться</a>
+                            <a href="#contacts" class="page-btn">Контакты</a>
                         </div>
                     </div>
                 </div>
@@ -103,12 +144,16 @@
 
         <!--Header banner-->
         <div class="header-banner">
-            <img src="images/header/mountain.png" alt="mountain">
+            <div class="banner-container">
+                <div class="banner-img">
+                    <img src="images/header/mountain.png" alt="mountain">
+                </div>
+            </div>
         </div>
         <!--//Header banner-->
 
         <!--Header skills-->
-        <div class="header-skills">
+        <div class="header-skills" id="skills">
             <div class="container">
                 <div class="header-skills__wrapper">
                     <div class="header-skills__list" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
@@ -121,7 +166,7 @@
                             <li class="skills-list__item">с Bootstrap и без него.</li>
                         </ul>
                         <div class="skills-button">
-                            <a href="#" class="main-btn">Смотреть работы</a>
+                            <a href="#portfolio" class="main-btn">Смотреть работы</a>
                         </div>
                     </div>
                     <div class="header-skills__contacts" data-aos="zoom-in" data-aos-duration="2000"
@@ -164,12 +209,13 @@
         <div class="container">
             <div class="portfolio__content">
                 <h2 class="portfolio-title underline">Портфолио</h2>
-                <nav class="portfolio-nav">
+                <!--<nav class="portfolio-nav">
                     <a href="#" class="portfolio-nav__item portfolio-nav__active">Все работы</a>
                     <a href="#" class="portfolio-nav__item">Bootstrap</a>
                     <a href="#" class="portfolio-nav__item">WordPress</a>
                     <a href="#" class="portfolio-nav__item">Frontend</a>
-                </nav>
+                </nav>-->
+
                 <div class="portfolio-cards">
                     <div class="portfolio-cards__wrapper">
                         <div class="portfolio-card" data-aos="flip-left" data-aos-duration="2000" data-aos-offset="100">
@@ -216,7 +262,6 @@
                             <a href="https://agzamasadullaev.github.io/motocard/" class="portfolio-card__text">
                                 <h3 class="portfolio-card__link">Верстка “Карточка мотоцикл”</h3>
                                 <h4 class="portfolio-card__desc">Верстка карточки мотоцикл. </h4>
-
                             </a>
                         </div>
 
@@ -334,7 +379,7 @@
                             </li>
                             <li class="contacts-list__item">
                                 <p class="contacts-adress">Телефон</p>
-                                <a href="#" class="contacs-link">+998 (94) 488-42-13</a>
+                                <a href="tel:+998944884213" class="contacs-link">+998 (94) 488-42-13</a>
                             </li>
                             <li class="contacts-list__item">
                                 <p class="contacts-adress">Адрес</p>
@@ -392,7 +437,7 @@
     <!--//Section contacts-->
 
     <!--Footer-->
-    <footer class="footer none">
+    <footer class="footer">
         <div class="container">
             <div class="footer__content">
                 <h3 class="footer-header">&copy; 2020 — Агзам Асадуллаев</h3>
