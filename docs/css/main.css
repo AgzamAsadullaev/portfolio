@@ -238,6 +238,9 @@ button {
 .facebook-circle {
   color: #3b5998;
 }
+.none {
+  display: none;
+}
 .header {
   padding-top: 30px;
   padding-bottom: 90px;
