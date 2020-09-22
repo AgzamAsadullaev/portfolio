@@ -806,7 +806,8 @@ button {
           transform: rotate(-45deg);
 }
 .navigation-menu {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 100vh;
   padding-top: 30px;
   padding-left: 15px;
@@ -835,6 +836,9 @@ button {
   -o-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+}
+.navigation-menu .header__logo {
+  width: 63px;
 }
 .nav-menu {
   display: -webkit-box;
@@ -883,10 +887,8 @@ button {
   -moz-transition: 0.5s;
   transition: 0.5s;
 }
-@media (min-width: 768px) {
-  .overlay.active {
-    display: block;
-  }
+.overlay.active {
+  display: block;
 }
 .section-portfolio {
   padding-top: 50px;
