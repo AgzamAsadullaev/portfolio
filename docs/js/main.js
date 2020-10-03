@@ -12,6 +12,15 @@ $(document).ready(function () {
     });
 
 
+    const navLink = $('.navigation-menu .nav-menu__link');
+    navLink.click(function () {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        body.classList.remove('active');
+    });
+
+
     //From placeholder
 
     const formInputs = document.querySelectorAll('.form-field');
