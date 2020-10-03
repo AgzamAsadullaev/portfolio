@@ -221,6 +221,7 @@
 
 .header-skills__list {
     max-width: 234px;
+    margin-bottom: 20px;
 
     @media (min-width:768px) {
         max-width: 340px;
@@ -247,7 +248,7 @@
 }
 
 .skills-list {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-size: 18px;
 
     @media (min-width:768px) {}
@@ -279,7 +280,8 @@
     display: none;
 
     @media (min-width:1200px) {
-        display: block;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -301,7 +303,8 @@
 
 
 
-.mailto-link {
+.mailto-link,
+.resume-link {
     color: #000;
     border-bottom: 1px solid #000;
     font-size: 18px;
@@ -322,5 +325,10 @@
 
     @media (min-width:1200px) {
         font-size: 24px;
+    }
+}
+.resume-link{
+    @media (min-width:1200px) {
+        display: none;
     }
 }

@@ -534,6 +534,7 @@ button {
 }
 .header-skills__list {
   max-width: 234px;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .header-skills__list {
@@ -562,7 +563,7 @@ button {
   }
 }
 .skills-list {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 @media (min-width: 1200px) {
@@ -588,7 +589,16 @@ button {
 }
 @media (min-width: 1200px) {
   .skills-button {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .header-skills__contacts {
@@ -607,27 +617,37 @@ button {
 .header-skills__contacts .skills-title {
   margin-bottom: 30px;
 }
-.mailto-link {
+.mailto-link,
+.resume-link {
   color: #000;
   border-bottom: 1px solid #000;
   font-size: 18px;
 }
-.mailto-link:hover {
+.mailto-link:hover,
+.resume-link:hover {
   color: #039be5;
   border-bottom: 1px solid #039be5;
 }
-.mailto-link:active {
+.mailto-link:active,
+.resume-link:active {
   color: #ea655f;
   border-bottom: 1px solid #ea655f;
 }
 @media (min-width: 768px) {
-  .mailto-link {
+  .mailto-link,
+  .resume-link {
     font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
-  .mailto-link {
+  .mailto-link,
+  .resume-link {
     font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .resume-link {
+    display: none;
   }
 }
 .header__navigation {
